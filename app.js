@@ -18,14 +18,17 @@ app.use(express.static("public"));
 //const items = ["Buy Food", "Cook Food", "Eat Food"];
 //const workItems = [];
 //#3 create schema
-const todolistSchema = new mongoose.Schema (
+const itemsSchema = new mongoose.Schema (
   {
-    taskName: {
+    name: {
       type: String,
       required: [true, "Please check your data entry"]
     }
   }
 );
+
+//#4 create model
+const Item = mongoose.model("Item", itemsSchema);
 
 //#2 establish mongoose connection
 mongoose.connect("mongodb://localhost:27017/todolistDB");
