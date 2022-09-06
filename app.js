@@ -17,7 +17,7 @@ app.use(express.static("public"));
 //lecture 342 code not needed for mongoose
 //const items = ["Buy Food", "Cook Food", "Eat Food"];
 //const workItems = [];
-//#3
+//#3 create schema
 const todolistSchema = new mongoose.Schema (
   {
     taskName: {
